@@ -1,2 +1,2 @@
-# Supreme-Court-Judgments
-Supreme Court Judgments
+# Supreme-Court-Judgments-Analysis
+Features Download judgments based on user queries from the Supreme Court website. Extract judge names, plaintiff names, and defendant names from the downloaded judgments. Determine subjects of judgments using the idf-tf algorithm and add keywords to the database. Perform keyword analysis using the vec2word algorithm and compare results with subject determination. Generate statistics on judges' judgments and the most popular subjects during a specific time period.
