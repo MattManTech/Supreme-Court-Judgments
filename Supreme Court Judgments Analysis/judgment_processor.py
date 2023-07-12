@@ -213,21 +213,8 @@ class VerdictProcessor:
                 if not re.search(list_pattern, player):
                     extra_data = player
                     teams_extra[team].append(extra_data)
-                    # if i - 1 < 0:
-                    #     continue
-                    # teams[team][i - 1] = f"{player} " + teams[team][i - 1]
                     del_indexes.append((team, i))
-        # print("hey2")
-        # for del_ind in del_indexes:
-        #     team_name = del_ind[0]
-        #     team_del_index = del_ind[1]
-        #     del teams[team_name][team_del_index]
-        # print("hey1")
-
-        # for team in teams.keys():
-        #     for i,player in enumerate(teams[team]):
-        #         new_text = re.sub(list_pattern, "", player).strip()
-        #         teams[team][i] = new_text
+        
 
         if len(teams['None']) == 0:
             del teams['None']
@@ -464,9 +451,6 @@ class VerdictProcessor:
             total_negative_score = negative_dict['score']
 
         des = "None"
-        # total_negative_score = total_negative_score / 4
-        # total_positive_score = total_positive_score * 20
-        # total_netural_score = total_netural_score
         print("negative:", total_negative_score, ",netural:", total_netural_score, "positive:", total_positive_score)
         if total_negative_score > total_positive_score and total_negative_score > total_netural_score:
             des = "negative"
